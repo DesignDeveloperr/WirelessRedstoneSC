@@ -1,0 +1,9 @@
+[{
+  "modid": "wirelessredstonesc",
+  "name": "Wireless Redstone SC",
+  "description": "Besprovodnoy redkamen u now??",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://stonkscraft.ru/",
+  "authorList": ["Victar_Torvalds_"]
+}]

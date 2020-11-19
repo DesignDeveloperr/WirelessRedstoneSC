@@ -1,0 +1,8 @@
+itemGroup.wrsc=Wireless Redstone SC
+tile.wrsc_receiver.name=Receiver
+tile.wrsc_transmitter.name=Transmitter
+item.wrsc_connector.name=Connector
+item.wrsc_connector_screen.name=Connector Screen
+item.wrsc_connector_plate.name=Connector Plate
+message.setconnector=Settings loaded
+message.getconnector=Settings installed

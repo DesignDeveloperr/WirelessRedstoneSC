@@ -31,17 +31,20 @@ public class BlockReceiver extends BlockTileEntity<TileEntityReceiver> {
     private final String texture_sides;
     private final String texture_top;
 
-    public BlockReceiver(boolean active, String texture_sides, String texture_top) {
+    public BlockReceiver(boolean active) {
         super(new Material(MapColor.ironColor));
         setStepSound(Block.soundTypeMetal);
         setBlockName("wrsc_receiver");
         setHardness(0.1F);
         this.active = active;
-        this.texture_sides = texture_sides;
-        this.texture_top = texture_top;
         if (!this.active) {
+            this.texture_sides = "wirelessredstonesc:receiver_sides";
+            this.texture_top = "wirelessredstonesc:receiver_top";
             setCreativeTab(WirelessRedstone.tabs);
             GameRegistry.registerTileEntity(this.getTileEntityClass(), this.getUnlocalizedName());
+        } else {
+            this.texture_sides = "wirelessredstonesc:receiver_sides_active";
+            this.texture_top = "wirelessredstonesc:receiver_top_active";
         }
     }
 
@@ -52,15 +55,17 @@ public class BlockReceiver extends BlockTileEntity<TileEntityReceiver> {
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
         try {
-            ItemStack itemStack = player.getCurrentEquippedItem();
-            TileEntityReceiver tileEntity = this.getTileEntity(world, x, y, z);
-            if (itemStack.getUnlocalizedName().equals(new ItemConnector().getUnlocalizedName())) {
-                NBTTagCompound nbt = itemStack.getTagCompound();
-                tileEntity.setCords(nbt.getInteger("x"), nbt.getInteger("y"), nbt.getInteger("z"), nbt.getInteger("world"));
-                if (!world.isRemote) {
-                    player.addChatMessage(new ChatComponentTranslation("message.getconnector"));
+            if (!world.isRemote) {
+                ItemStack itemStack = player.getCurrentEquippedItem();
+                TileEntityReceiver tileEntity = this.getTileEntity(world, x, y, z);
+                if (itemStack.getUnlocalizedName().equals(new ItemConnector().getUnlocalizedName())) {
+                    NBTTagCompound nbt = itemStack.getTagCompound();
+                    tileEntity.setCords(nbt.getInteger("x"), nbt.getInteger("y"), nbt.getInteger("z"), nbt.getInteger("world"));
+                    if (!world.isRemote) {
+                        player.addChatMessage(new ChatComponentTranslation("message.getconnector"));
+                    }
+                    return true;
                 }
-                return true;
             }
         } catch (NullPointerException ignored) {}
         return false;

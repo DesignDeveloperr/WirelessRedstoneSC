@@ -24,15 +24,20 @@ public class BlockTransmitter extends Block {
     private final String texture_sides;
     private final String texture_top;
 
-    public BlockTransmitter(boolean active, String texture_sides, String texture_top) {
+    public BlockTransmitter(boolean active) {
         super(new Material(MapColor.ironColor));
         setStepSound(Block.soundTypeMetal);
         setBlockName("wrsc_transmitter");
         setHardness(0.1F);
         this.active = active;
-        this.texture_sides = texture_sides;
-        this.texture_top = texture_top;
-        if (!this.active) setCreativeTab(WirelessRedstone.tabs);
+        if (!this.active) {
+            setCreativeTab(WirelessRedstone.tabs);
+            this.texture_sides = "wirelessredstonesc:transmitter_sides";
+            this.texture_top = "wirelessredstonesc:transmitter_top";
+        } else {
+            this.texture_sides = "wirelessredstonesc:transmitter_sides_active";
+            this.texture_top = "wirelessredstonesc:transmitter_top_active";
+        }
     }
 
     public boolean isActive() {

@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-String wrsc_version = "1.0.5"
+String wrsc_version = "1.0.6"
 version = wrsc_version
 group= "ru.stonkscraft.wirelessredstonesc" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "wirelessredstonesc"

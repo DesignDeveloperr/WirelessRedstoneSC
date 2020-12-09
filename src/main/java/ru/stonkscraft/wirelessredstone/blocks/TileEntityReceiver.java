@@ -71,15 +71,7 @@ public class TileEntityReceiver extends TileEntity {
     }
 
     @Override
-    public boolean canUpdate() {
-        return true;
-    }
-
-    @Override
     public void updateEntity() {
-        World world = this.worldObj;
-        if (!world.isRemote) {
-            world.scheduleBlockUpdate(this.xCoord, this.yCoord, this.zCoord, world.getBlock(this.xCoord, this.yCoord, this.zCoord), 4);
-        }
+        if (!this.worldObj.isRemote) this.worldObj.scheduleBlockUpdate(this.xCoord, this.yCoord, this.zCoord, this.worldObj.getBlock(this.xCoord, this.yCoord, this.zCoord), 0);
     }
 }

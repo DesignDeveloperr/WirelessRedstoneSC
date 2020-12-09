@@ -23,7 +23,7 @@ public class WirelessRedstone {
 
     public static final String MOD_ID = "wirelessredstonesc";
     public static final String MOD_NAME = "Wireless Redstone SC";
-    public static final String MOD_VERSION = "1.0.0";
+    public static final String MOD_VERSION = "WRSC_VERSION";
 
     @SidedProxy(clientSide = "ru.stonkscraft.wirelessredstone.ClientProxy", serverSide = "ru.stonkscraft.wirelessredstone.CommonProxy")
     public static CommonProxy proxy;

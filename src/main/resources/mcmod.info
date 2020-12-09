@@ -5,5 +5,6 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "https://stonkscraft.ru/",
-  "authorList": ["Victar_Torvalds_"]
+  "authorList": ["Victar_Torvalds_"],
+  "logoFile": "logo.png"
 }]

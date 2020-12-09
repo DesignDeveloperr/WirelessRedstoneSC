@@ -773,6 +773,13 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="Waila_1.5.10_1.7.10">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/libs/Waila_1.5.10_1.7.10.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="libs">
       <CLASSES>
         <root url="file://$PROJECT_DIR$/libs" />

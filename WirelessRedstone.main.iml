@@ -89,5 +89,6 @@
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:natives-linux:2.9.1" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:natives-osx:2.9.1" level="project" />
     <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="library" name="Waila_1.5.10_1.7.10" level="project" />
   </component>
 </module>

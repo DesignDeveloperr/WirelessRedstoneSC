@@ -22,24 +22,49 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1d57a74-c432-4b1e-9c9b-7fafe4b99e93" name="Default Changelist" comment="clean up">
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player649.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player762.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player971.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/6be062b2-d5f9-3e2d-be7e-7d0540b46d78.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/7fac0f4d-6ee9-33e9-a874-7b4a3cc238c6.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/b3f55dee-e1b0-36b3-b913-a72bec89c0ee.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/f948ac75-0055-3be3-bc2b-d97345a02022.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/fc13d9f9-a806-3ae0-82c2-ce24ef162c15.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/6be062b2-d5f9-3e2d-be7e-7d0540b46d78.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/7fac0f4d-6ee9-33e9-a874-7b4a3cc238c6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/b3f55dee-e1b0-36b3-b913-a72bec89c0ee.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/f948ac75-0055-3be3-bc2b-d97345a02022.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/fc13d9f9-a806-3ae0-82c2-ce24ef162c15.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/CodeChickenCore-1.7.10-1.0.7.47-universal.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/CodeChickenLib-1.7.10-1.1.3.140-universal.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/NotEnoughItems-1.7.10-1.0.5.118-universal.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/utils/Craft.java" afterDir="false" />
+    <list default="true" id="f1d57a74-c432-4b1e-9c9b-7fafe4b99e93" name="Default Changelist" comment="add crafts">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/asm/ccl_modular/net#minecraft#tileentity#MobSpawnerBaseLogic.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/config/Waila.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player242.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player281.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player319.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player427.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player547.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player608.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player749.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player769.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player824.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player856.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player965.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/NEI/players/Player98.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/062aacfa-27f8-3a16-95b1-e980c0c72c9e.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/0de21b13-73b3-37ba-84f2-92c78b6712c2.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/20c1711e-6e1a-34df-86a3-92ae832d2f9f.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/2797ecaf-07ab-3788-a2f8-6002cfc50e1d.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/3125069d-d602-307c-b8a2-944bd3e356c2.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/577679a7-fd79-34ce-82ca-9e17c30582b1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/b0121b71-1aec-310d-8ee8-525ebe3fec09.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/b743052f-5855-37e7-a97b-fd551acafef4.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/d37346cb-6397-30a1-9ba8-85e1aa0153dd.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/d57d87cd-d04d-3cef-89d6-abaa1a1b0b56.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/e7d801f5-83cd-3782-a52b-ae99232cd193.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/playerdata/f0737fb5-4d0f-3bee-a039-92e456a5cc2e.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/062aacfa-27f8-3a16-95b1-e980c0c72c9e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/0de21b13-73b3-37ba-84f2-92c78b6712c2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/20c1711e-6e1a-34df-86a3-92ae832d2f9f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/2797ecaf-07ab-3788-a2f8-6002cfc50e1d.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/3125069d-d602-307c-b8a2-944bd3e356c2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/577679a7-fd79-34ce-82ca-9e17c30582b1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/b0121b71-1aec-310d-8ee8-525ebe3fec09.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/b743052f-5855-37e7-a97b-fd551acafef4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/d37346cb-6397-30a1-9ba8-85e1aa0153dd.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/d57d87cd-d04d-3cef-89d6-abaa1a1b0b56.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/e7d801f5-83cd-3782-a52b-ae99232cd193.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/stats/f0737fb5-4d0f-3bee-a039-92e456a5cc2e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/Waila_1.5.10_1.7.10.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/utils/Nei.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/utils/Waila.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterDir="false" />
@@ -48,7 +73,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WirelessRedstone.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/WirelessRedstone.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WirelessRedstone.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WirelessRedstone.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WirelessRedstone.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WirelessRedstone.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/config/splash.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/2020-12-09-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/2020-12-09-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/2020-12-09-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/2020-12-09-2.log.gz" afterDir="false" />
@@ -63,9 +90,13 @@
       <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-latest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-junk-earlystartup.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-junk-earlystartup.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/options.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM-1/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM-1/data/villages.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM-1/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM-1/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM-1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM-1/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM-1/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM-1/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM-1/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM-1/region/r.0.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM1/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/DIM1/data/villages.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/data/Village.dat" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/data/Village.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/data/villages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/level.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/level.dat_old" afterDir="false" />
@@ -78,11 +109,14 @@
       <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/region/r.0.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/Copy of New World/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/Copy of New World/session.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/usernamecache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/CommonProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/CommonProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/CodeChickenCore-1.7.10-1.0.7.47-universal.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/CodeChickenCore-1.7.10-1.0.7.47-universal-deobf.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/CodeChickenLib-1.7.10-1.1.3.140-universal.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/CodeChickenLib-1.7.10-1.1.3.140-universal-deobf.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/WirelessRedstone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/WirelessRedstone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/blocks/BlockReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/blocks/BlockReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/blocks/BlockTransmitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/blocks/BlockTransmitter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/utils/Crafts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/items/ItemConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stonkscraft/wirelessredstone/items/ItemConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/wirelessredstonesc/lang/en_US.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/wirelessredstonesc/lang/en_US.lang" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/wirelessredstonesc/lang/ru_RU.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/wirelessredstonesc/lang/ru_RU.lang" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,6 +257,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -231,14 +266,14 @@
       <recent name="C:\Projects\WirelessRedstone\src\main\resources\textures\blocks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\WirelessRedstone\libs" />
       <recent name="C:\Projects\WirelessRedstone\src\main\resources\assets\wirelessredstonesc\textures\blocks" />
       <recent name="C:\Projects\WirelessRedstone\src\main\resources\assets\wirelessredstonesc\textures\items" />
       <recent name="C:\Projects\WirelessRedstone\src\main\resources\assets\wirelessredstonesc\textures" />
       <recent name="C:\Projects\WirelessRedstone\src\main\resources\textures" />
-      <recent name="C:\Projects\WirelessRedstone\src\main\resources\assets\wirelessredstonesc" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.WirelessRedstone [runClient]">
+  <component name="RunManager" selected="Gradle.WirelessRedstone [build]">
     <configuration default="true" factoryName="Applet" type="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -408,8 +443,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.WirelessRedstone [runClient]" />
         <item itemvalue="Gradle.WirelessRedstone [build]" />
+        <item itemvalue="Gradle.WirelessRedstone [runClient]" />
         <item itemvalue="Gradle.WirelessRedstone [setupDecompWorkspace]" />
         <item itemvalue="Gradle.WirelessRedstone [clean]" />
       </list>
@@ -448,7 +483,9 @@
       <workItem from="1606849145279" duration="494000" />
       <workItem from="1606850434003" duration="1434000" />
       <workItem from="1607475996671" duration="112000" />
-      <workItem from="1607476171306" duration="19121000" />
+      <workItem from="1607476171306" duration="20187000" />
+      <workItem from="1607499990314" duration="7315000" />
+      <workItem from="1607507471976" duration="2930000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <created>1605790967735</created>
@@ -478,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607492090503</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add crafts">
+      <created>1607495682476</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607495682476</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +546,8 @@
     <MESSAGE value="upload" />
     <MESSAGE value="add multi world support" />
     <MESSAGE value="clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
+    <MESSAGE value="add crafts" />
+    <option name="LAST_COMMIT_MESSAGE" value="add crafts" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

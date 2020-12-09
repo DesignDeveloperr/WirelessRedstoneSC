@@ -35,6 +35,10 @@ public class BlockTransmitter extends Block {
         if (!this.active) setCreativeTab(WirelessRedstone.tabs);
     }
 
+    public boolean isActive() {
+        return this.active;
+    }
+
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister register) {

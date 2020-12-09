@@ -1,0 +1,10 @@
+/eclipse/
+/.gradle/
+WirelessRedstone.api.iml
+WirelessRedstone.iml
+WirelessRedstone.ipr
+WirelessRedstone.iws
+WirelessRedstone.main.iml
+WirelessRedstone.test.iml
+/build/
+forge-1.7.10-10.13.4.1614-1.7.10-changelog.txt

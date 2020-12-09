@@ -52,6 +52,7 @@ public class ItemConnector extends Item {
                 list.add("X: " + nbt.getInteger("x"));
                 list.add("Y: " + nbt.getInteger("y"));
                 list.add("Z: " + nbt.getInteger("z"));
+                list.add("World: DIM" + nbt.getInteger("world"));
             }
         } catch (NullPointerException ignored) {}
     }

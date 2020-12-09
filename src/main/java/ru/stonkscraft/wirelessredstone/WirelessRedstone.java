@@ -1,15 +1,18 @@
 package ru.stonkscraft.wirelessredstone;
 
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import ru.stonkscraft.wirelessredstone.items.WRItems;
 import ru.stonkscraft.wirelessredstone.utils.Craft;
+import ru.stonkscraft.wirelessredstone.utils.Nei;
 
 @Mod(
     modid = WirelessRedstone.MOD_ID,
@@ -35,6 +38,7 @@ public class WirelessRedstone {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit(event);
+        FMLInterModComms.sendMessage("Waila", "register", "ru.stonkscraft.wirelessredstone.utils.Waila.load");
     }
 
     @EventHandler
@@ -46,7 +50,7 @@ public class WirelessRedstone {
     public void postInit(FMLPostInitializationEvent event) {
         proxy.postInit(event);
         Craft.register();
+        if (Loader.isModLoaded("NotEnoughItems")) Nei.load();
     }
-
 
 }

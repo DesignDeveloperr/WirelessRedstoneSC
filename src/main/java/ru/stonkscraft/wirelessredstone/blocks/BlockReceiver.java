@@ -15,6 +15,9 @@ import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldManager;
+import net.minecraft.world.WorldProvider;
+import net.minecraftforge.common.DimensionManager;
 import ru.stonkscraft.wirelessredstone.WirelessRedstone;
 import ru.stonkscraft.wirelessredstone.items.ItemConnector;
 import ru.stonkscraft.wirelessredstone.utils.BlockTileEntity;
@@ -40,21 +43,6 @@ public class BlockReceiver extends BlockTileEntity<TileEntityReceiver> {
             setCreativeTab(WirelessRedstone.tabs);
             GameRegistry.registerTileEntity(this.getTileEntityClass(), this.getUnlocalizedName());
         }
-        this.setTickRandomly(true);
-    }
-
-    @Override
-    public void onNeighborBlockChange(World world, int x, int y, int z, Block p_149695_5_) {
-        if (!world.isRemote) {
-            TileEntityReceiver tileEntityReceiver = this.getTileEntity(world, x, y, z);
-            int tx = tileEntityReceiver.getX();
-            int ty = tileEntityReceiver.getY();
-            int tz = tileEntityReceiver.getZ();
-            world.scheduleBlockUpdate(x, y, z, this, 20);
-            tileEntityReceiver.setX(tx);
-            tileEntityReceiver.setY(ty);
-            tileEntityReceiver.setZ(tz);
-        }
     }
 
     @Override
@@ -64,21 +52,23 @@ public class BlockReceiver extends BlockTileEntity<TileEntityReceiver> {
             TileEntityReceiver tileEntity = this.getTileEntity(world, x, y, z);
             if (itemStack.getUnlocalizedName().equals(new ItemConnector().getUnlocalizedName())) {
                 NBTTagCompound nbt = itemStack.getTagCompound();
-                tileEntity.setX(nbt.getInteger("x"));
-                tileEntity.setY(nbt.getInteger("y"));
-                tileEntity.setZ(nbt.getInteger("z"));
+                tileEntity.setCords(nbt.getInteger("x"), nbt.getInteger("y"), nbt.getInteger("z"), nbt.getInteger("world"));
                 if (!world.isRemote) {
                     player.addChatMessage(new ChatComponentTranslation("message.getconnector"));
-                    world.scheduleBlockUpdate(x, y, z, this, 20);
-                    TileEntityReceiver tileEntityReceiver = this.getTileEntity(world, x, y, z);
-                    tileEntityReceiver.setX(nbt.getInteger("x"));
-                    tileEntityReceiver.setY(nbt.getInteger("y"));
-                    tileEntityReceiver.setZ(nbt.getInteger("z"));
                 }
                 return true;
             }
         } catch (NullPointerException ignored) {}
         return false;
+    }
+
+    private void updateBlock(World world, int x, int y, int z, int tx, int ty, int tz, int worldId) {
+        TileEntityReceiver tileEntityReceiver = this.getTileEntity(world, x, y, z);
+        tileEntityReceiver.setCords(tx, ty, tz, worldId);
+        for (int i = -1; i < 1; i++)
+            for (int j = -1; j < 1; j++)
+                for (int k = -1; k < 1; k++)
+                    world.notifyBlocksOfNeighborChange(x + i, y + j, z + k, this);
     }
 
     @Override
@@ -89,18 +79,17 @@ public class BlockReceiver extends BlockTileEntity<TileEntityReceiver> {
                 int tx = tileEntity.getX();
                 int ty = tileEntity.getY();
                 int tz = tileEntity.getZ();
-                if (this.active && !world.isBlockIndirectlyGettingPowered(tx, ty, tz)) {
+                int worldId = tileEntity.getWorldId();
+                World worldRemote = DimensionManager.getWorld(worldId);
+                if (this.active && !worldRemote.isBlockIndirectlyGettingPowered(tx, ty, tz) && worldRemote.getBlock(tx, ty, tz).getUnlocalizedName().equals("tile.wrsc_transmitter")) {
                     world.setBlock(x, y, z, WRBlocks.receiver, 0, 2);
-                    TileEntityReceiver tileEntityReceiver = this.getTileEntity(world, x, y, z);
-                    tileEntityReceiver.setX(tx);
-                    tileEntityReceiver.setY(ty);
-                    tileEntityReceiver.setZ(tz);
-                } else if (!this.active && world.isBlockIndirectlyGettingPowered(tx, ty, tz)) {
+                    updateBlock(world, x, y, z, tx, ty, tz, worldId);
+                } else if (!this.active && worldRemote.isBlockIndirectlyGettingPowered(tx, ty, tz) && worldRemote.getBlock(tx, ty, tz).getUnlocalizedName().equals("tile.wrsc_transmitter")) {
                     world.setBlock(x, y, z, WRBlocks.receiver_active, 0, 2);
-                    TileEntityReceiver tileEntityReceiver = this.getTileEntity(world, x, y, z);
-                    tileEntityReceiver.setX(tx);
-                    tileEntityReceiver.setY(ty);
-                    tileEntityReceiver.setZ(tz);
+                    updateBlock(world, x, y, z, tx, ty, tz, worldId);
+                } else if (this.active && !worldRemote.getBlock(tx, ty, tz).getUnlocalizedName().equals("tile.wrsc_transmitter")) {
+                    world.setBlock(x, y, z, WRBlocks.receiver, 0, 2);
+                    updateBlock(world, x, y, z, tx, ty, tz, worldId);
                 }
             }
         } catch (NullPointerException ignored) {}

@@ -4,9 +4,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.common.MinecraftForge;
 import ru.stonkscraft.wirelessredstone.blocks.WRBlocks;
-import ru.stonkscraft.wirelessredstone.events.WRIvents;
 import ru.stonkscraft.wirelessredstone.items.WRItems;
 import ru.stonkscraft.wirelessredstone.utils.Crafts;
 

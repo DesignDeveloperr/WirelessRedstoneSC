@@ -1,6 +1,5 @@
 package ru.stonkscraft.wirelessredstone.blocks;
 
-import net.minecraft.block.Block;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
@@ -13,49 +12,48 @@ public class TileEntityReceiver extends TileEntity {
     private int x;
     private int y;
     private int z;
+    private int worldId;
 
 
     public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        System.out.println("Какая-то тварь поставила X = " + x);
-        this.x = x;
-        this.markDirty();
+        return this.x;
     }
 
     public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-        this.markDirty();
+        return this.y;
     }
 
     public int getZ() {
-        return z;
+        return this.z;
     }
 
-    public void setZ(int z) {
+    public int getWorldId() {
+        return this.worldId;
+    }
+
+    public void setCords(int x, int y, int z, int worldId) {
+        this.x = x;
+        this.y = y;
         this.z = z;
+        this.worldId = worldId;
         this.markDirty();
     }
 
     @Override
     public void writeToNBT(NBTTagCompound nbt) {
-        nbt.setInteger("x", this.x);
-        nbt.setInteger("y", this.y);
-        nbt.setInteger("z", this.z);
+        nbt.setInteger("xt", this.x);
+        nbt.setInteger("yt", this.y);
+        nbt.setInteger("zt", this.z);
+        nbt.setInteger("worldt", this.worldId);
         super.writeToNBT(nbt);
     }
 
     @Override
     public void readFromNBT(NBTTagCompound nbt) {
-        this.x = nbt.getInteger("x");
-        this.y = nbt.getInteger("y");
-        this.z = nbt.getInteger("z");
+        this.x = nbt.getInteger("xt");
+        this.y = nbt.getInteger("yt");
+        this.z = nbt.getInteger("zt");
+        this.worldId = nbt.getInteger("worldt");
         super.readFromNBT(nbt);
     }
 
@@ -63,7 +61,7 @@ public class TileEntityReceiver extends TileEntity {
     public Packet getDescriptionPacket() {
         NBTTagCompound nbt = new NBTTagCompound();
         this.writeToNBT(nbt);
-        return new S35PacketUpdateTileEntity(this.x, this.y, this.z, 3, nbt);
+        return new S35PacketUpdateTileEntity(this.xCoord, this.yCoord, this.zCoord, 3, nbt);
     }
 
     @Override
@@ -79,10 +77,9 @@ public class TileEntityReceiver extends TileEntity {
 
     @Override
     public void updateEntity() {
-        World world = getWorldObj();
+        World world = this.worldObj;
         if (!world.isRemote) {
-            world.scheduleBlockUpdate(this.xCoord, this.yCoord, this.zCoord, WRBlocks.receiver, 4);
-            world.scheduleBlockUpdate(this.xCoord, this.yCoord, this.zCoord, WRBlocks.receiver_active, 4);
+            world.scheduleBlockUpdate(this.xCoord, this.yCoord, this.zCoord, world.getBlock(this.xCoord, this.yCoord, this.zCoord), 4);
         }
     }
 }

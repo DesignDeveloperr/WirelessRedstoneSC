@@ -18,7 +18,7 @@
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
   <component name="DiscordProjectSettings">
-    <option name="show" value="PROJECT" />
+    <option name="show" value="PROJECT_FILES" />
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">

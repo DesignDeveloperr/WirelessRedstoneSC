@@ -6,3 +6,4 @@ item.wrsc_connector_screen.name=Экран соединителя
 item.wrsc_connector_plate.name=Плата соединителя
 message.setconnector=Настройки загружены
 message.getconnector=Настройки установленны
+message.connector.tune=Настроен

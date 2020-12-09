@@ -7,8 +7,11 @@ import net.minecraft.block.BlockRedstoneOre;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import ru.stonkscraft.wirelessredstone.WirelessRedstone;
 
@@ -46,8 +49,7 @@ public class BlockTransmitter extends Block {
         return sides;
     }
 
-    @Override
-    public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
+    private void updateBlock(World world, int x, int y, int z) {
         if (!world.isRemote) {
             if (this.active && !world.isBlockIndirectlyGettingPowered(x, y, z)) {
                 world.scheduleBlockUpdate(x, y, z, this, 4);
@@ -59,15 +61,13 @@ public class BlockTransmitter extends Block {
     }
 
     @Override
+    public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
+        updateBlock(world, x, y, z);
+    }
+
+    @Override
     public void onBlockAdded(World world, int x, int y, int z) {
-        if (!world.isRemote) {
-            if (this.active && !world.isBlockIndirectlyGettingPowered(x, y, z)) {
-                world.scheduleBlockUpdate(x, y, z, this, 4);
-            }
-            else if (!this.active && world.isBlockIndirectlyGettingPowered(x, y, z)) {
-                world.setBlock(x, y, z, WRBlocks.transmitter_active, 0, 2);
-            }
-        }
+        updateBlock(world, x, y, z);
     }
 
     @Override
@@ -79,6 +79,11 @@ public class BlockTransmitter extends Block {
     @Override
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
         return Item.getItemFromBlock(WRBlocks.transmitter);
+    }
+
+    @Override
+    public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z, EntityPlayer player) {
+        return new ItemStack(WRBlocks.transmitter, 1);
     }
 
     @SideOnly(Side.CLIENT)

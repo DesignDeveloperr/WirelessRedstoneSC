@@ -773,6 +773,14 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="libs">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/libs" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/libs" recursive="false" />
+    </library>
   </component>
   <component name="masterDetails">
     <states>

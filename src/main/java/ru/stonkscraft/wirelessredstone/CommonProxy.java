@@ -6,7 +6,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import ru.stonkscraft.wirelessredstone.blocks.WRBlocks;
 import ru.stonkscraft.wirelessredstone.items.WRItems;
-import ru.stonkscraft.wirelessredstone.utils.Crafts;
 
 public class CommonProxy {
 
@@ -14,7 +13,6 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
         WRBlocks.register();
         WRItems.register();
-        Crafts.register();
     }
 
     @EventHandler

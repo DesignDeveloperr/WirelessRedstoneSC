@@ -9,6 +9,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import ru.stonkscraft.wirelessredstone.items.WRItems;
+import ru.stonkscraft.wirelessredstone.utils.Craft;
 
 @Mod(
     modid = WirelessRedstone.MOD_ID,
@@ -44,6 +45,7 @@ public class WirelessRedstone {
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         proxy.postInit(event);
+        Craft.register();
     }
 
 

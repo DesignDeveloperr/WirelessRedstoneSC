@@ -15,8 +15,6 @@ import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldManager;
-import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.DimensionManager;
 import ru.stonkscraft.wirelessredstone.WirelessRedstone;
 import ru.stonkscraft.wirelessredstone.items.ItemConnector;
@@ -27,9 +25,9 @@ import java.util.Random;
 public class BlockReceiver extends BlockTileEntity<TileEntityReceiver> {
 
     private IIcon top, sides;
-    private boolean active;
-    private String texture_sides;
-    private String texture_top;
+    private final boolean active;
+    private final String texture_sides;
+    private final String texture_top;
 
     public BlockReceiver(boolean active, String texture_sides, String texture_top) {
         super(new Material(MapColor.ironColor));

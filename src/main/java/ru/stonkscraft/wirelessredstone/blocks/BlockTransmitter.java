@@ -17,9 +17,9 @@ import java.util.Random;
 public class BlockTransmitter extends Block {
 
     private IIcon top, sides;
-    private boolean active;
-    private String texture_sides;
-    private String texture_top;
+    private final boolean active;
+    private final String texture_sides;
+    private final String texture_top;
 
     public BlockTransmitter(boolean active, String texture_sides, String texture_top) {
         super(new Material(MapColor.ironColor));
